@@ -25,7 +25,7 @@ body {
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  background-color: #f1f2f6;
+  background-color: #BDE0FE;
 }
 
 
@@ -60,24 +60,19 @@ form {
   flex:1;
 }
 
-.header {
-  padding-top: 0rem;
-  padding-left: 0rem;
-  padding-right: 0rem;
-  padding-bottom: 0rem;
-}
 
 .header h1 {
   display: block;
 
-  background-color: rgb(255, 188, 213);
-  color: #4a4a4a;
+  /*background-color: rgb(255, 188, 213);
+  color: #4a4a4a;*/
 
   border-radius: 6px;
   font-size: 1.5rem;
   padding: 1.25rem;
   margin:0; 
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  border: 2px dashed;
 }
 
 .box {
@@ -103,7 +98,8 @@ form {
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
-  max-width: 450px;
+  flex-direction: column;
+  display: flex;
 }
 
 .footer {
@@ -112,6 +108,9 @@ form {
   background-color: rgba(205, 180, 219);
   font-size: 1.2rem;
   font-weight: 600;
+  position: sticky;
+  bottom: 0;
+  border: 2px dashed;
 }
 
 .footer a {
@@ -243,8 +242,16 @@ form input {
     }
 
     .right_section {
-      display: flex;
+            flex: 1 1 auto;
+            justify-content: flex-start;
+
+    }
+
+    .box{
+      width: 100%;
+      width: -moz-available;          /* WebKit-based browsers will ignore this. */
+      width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      width: fill-available;
       align-items: flex-start;
-      flex: 0 1 auto;
     }
 }
